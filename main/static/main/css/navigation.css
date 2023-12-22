@@ -1,0 +1,56 @@
+/* navigation.css */
+aside {
+    width: 200px;
+    height: 100vh;
+    background-color: #00000094;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+    position: fixed;
+}
+
+aside img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul a {
+    text-decoration: none;
+    color: #fff;
+}
+
+aside ul li {
+    margin-bottom: 15px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s, color 0.3s;
+}
+
+aside ul li:hover {
+    transform: scale(1.05);
+    color: #eb5959;
+    text-decoration: none;
+}
+
+aside ul li i {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    aside {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+}

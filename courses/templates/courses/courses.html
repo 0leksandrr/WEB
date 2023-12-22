@@ -1,0 +1,25 @@
+<!-- courses.html -->
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block title %}
+    Courses
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'main/css/courses.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="courses-container">
+        <h1>This is index template</h1>
+        <h4>
+            {% for item in items %}
+                <a href="{% url 'coursesItem' item.id %}">
+                    ID: {{ item.id }} | {{ item.name }} | {{ item.price }} | {{ item.description }} </br>
+                </a>
+            {% endfor %}
+        </h4>
+    </div>
+{% endblock %}

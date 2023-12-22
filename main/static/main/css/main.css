@@ -1,0 +1,81 @@
+@import 'navigation.css';
+@import 'register.css';
+/* @import 'courses.css'; */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #1b1d20;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+
+.features {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.features h1 {
+    font-size: 50px;
+    margin-top: 0;
+}
+
+.features p {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.alert-warning {
+    width: 60%;
+    margin: 30px auto 20px;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #e47162;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.alert-warning h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.alert-warning p {
+    font-size: 16px;
+    color: #ab2222;
+}
+
+.intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    z-index: -1; 
+}
+
+form {
+    margin-left: 32%;
+    width: 500px;
+    margin: 50px auto 0;
+}
+
+main {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    main {
+        margin-left: 0;
+    }
+}

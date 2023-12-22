@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+
+{% block title %}Курси{% endblock %}   
+
+{% block content %}
+    <div class="features">
+        <h1>Ласкаво просимо до Online-Education!</h1>
+        <p>Онлайн-платформа з навчання в галузі ІТ, де ви можете розвивати свої навички та отримувати нові знання.</p>
+        <p>Наші курси створені професіоналами галузі та покривають широкий спектр тем, від програмування до адміністрування систем.</p>
+        <p>Оберіть свій шлях розвитку, зареєструйтеся на курс і розпочніть свій шлях до успіху в ІТ-сфері.</p>
+        <button class="btn btn-warning">Про нас</button>
+    </div>
+    <div class="intro" id="intro">
+
+    </div>
+    <script src="{% static 'main/js/three.min.js' %}"></script>
+    <script src="{% static 'main/js/vanta.waves.min.js' %}"></script>
+    <script src="{% static 'main/js/app.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+    Реєстрація та Вхід
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="form-container" id="registration-form">
+            <h2>Реєстрація</h2>
+            <form action="/register" method="post">
+                <label for="username">Ім'я користувача:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Зареєструватися</button>
+            </form>
+        </div>
+
+        <div class="form-container" id="login-form" style="display: none;">
+            <h2>Вхід</h2>
+            <form action="/login" method="post">
+                <label for="loginUsername">Ім'я користувача:</label>
+                <input type="text" id="loginUsername" name="loginUsername" required>
+
+                <label for="loginPassword">Пароль:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+
+                <button type="submit">Увійти</button>
+            </form>
+        </div>
+
+        <div class="switch-form">
+            <p>Ще не маєте облікового запису? <a href="#" onclick="toggleForms()">Реєстрація</a></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleForms() {
+            var registrationForm = document.getElementById('registration-form');
+            var loginForm = document.getElementById('login-form');
+
+            if (registrationForm.style.display === 'none') {
+                registrationForm.style.display = 'block';
+                loginForm.style.display = 'none';
+            } else {
+                registrationForm.style.display = 'none';
+                loginForm.style.display = 'block';
+            }
+        }
+    </script>
+{% endblock %}

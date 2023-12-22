@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/courses.css' %}">
+    <script src="https://kit.fontawesome.com/3c27b7b41a.js" crossorigin="anonymous"></script>
+    <style>
+        .Лого {
+            font-size: 20px; 
+            margin-bottom: 15px; /* Додайте відступ вниз */
+        }
+
+        ul {
+            font-size: 14px; /* Збільште або зменште розмір шрифту */
+        }
+    </style>
+</head>
+<body>
+    <aside>
+        <img src="{% static 'main/img/LOGOTIP.png' %}" alt="Лого">
+        <span class = 'Лого'>Online-Education</span>
+        <ul>
+            <a href="{% url 'home' %}"><li><i class="fa-solid fa-house"></i> Головна</li></a>
+            <a href="{% url 'courses' %}"><li><i class="fa-solid fa-bars-progress"></i> Курси</li></a>
+            <a href="{% url 'curriculum' %}"><li><i class="fa-solid fa-book-reader"></i> Програма Курсів</li></a>
+            <a href="{% url 'instructors' %}"><li><i class="fa-solid fa-chalkboard-teacher"></i> Викладачі</li></a>
+            <a href="{% url 'resources' %}"><li><i class="fa-solid fa-file-alt"></i> Ресурси</li></a>
+            <a href="{% url 'registration' %}"><li><i class="fa-solid fa-clipboard-list"></i> Реєстрація</li></a>
+            <a href="{% url 'news_home' %}"><li><i class="fa-regular fa-newspaper"></i> Новини</li></a>
+            <a href="{% url 'about' %}"><li><i class="fa-solid fa-circle-info"></i> Про нас</li></a>
+            <a href="{% url 'contact' %}"><li><i class="fa-regular fa-address-book"></i> Зворотній Зв'язок</li></a>
+            <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fas fa-plus-circle">Добавити новину</i></button></li></a>
+
+        </ul>
+    </aside>
+    <main>
+        {% block content%}{% endblock %}
+    </main>
+</body>
+</html>
