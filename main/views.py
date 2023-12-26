@@ -1,6 +1,5 @@
 from django.shortcuts import render
 
-# Функція для головної сторінки
 def index(request):
     return render(request, 'main/index.html')
 
@@ -21,3 +20,4 @@ def about(request):
 
 def contact(request):
     return render(request, 'main/contact.html')
+
