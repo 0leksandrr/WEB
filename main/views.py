@@ -13,9 +13,6 @@ def instructors(request):
 def resources(request):
     return render(request, 'main/resources.html')
 
-def registration(request):
-    return render(request, 'main/registration.html')
-
 def forum(request):
     return render(request, 'main/forum.html')
 
