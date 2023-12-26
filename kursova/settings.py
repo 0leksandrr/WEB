@@ -136,3 +136,4 @@ MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
 
 LOGIN_REDIRECT_URL = 'courses'
+LOGIN_URL = 'users:login'
