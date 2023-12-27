@@ -1,4 +1,3 @@
-<!-- coursesItem.html -->
 {% extends 'main/layout.html' %}
 
 {% load static %}
@@ -13,46 +12,71 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container mt-3">
-        <div class="row">
+
             <div class="col-md-6">
                 <h1 class="font-weight-bold">{{ item.name }}</h1>
                 <p class="lead">{{ item.description }}</p>
                 <p class="font-weight-bold">Ціна: ₴ {{ item.price | intcomma }}</p>
                 
-                <!-- Додайте додаткові розділи або інформацію про курс за потреби -->
-
                 <h2 class="mt-4">Що ви навчитесь:</h2>
-                <ul class="list-group">
-                    <li class="list-group-item">Вступ до Python</li>
-                    <li class="list-group-item">Основи Pytho</li>
-                    <li class="list-group-item">Управління потоком передачі даних</li>
-                    <li class="list-group-item">Функції</li>
-                    <li class="list-group-item">Списки</li>
-                    <li class="list-group-item">Робота з файлами</li>
-                    <li class="list-group-item">Організація файлів</li>
-                    <li class="list-group-item">Помилки та винятки</li>
-                    <li class="list-group-item">Обʼєктно-орієнтований Python</li>
-                    <li class="list-group-item">Графічний інтерфейс - GUI</li>
-                </ul>
+                <ul class="list-group">     
+                    <li class="list-group-item">{{ item.topics1 }}</li>
+                    <li class="list-group-item">{{ item.topics2 }}</li>
+                    <li class="list-group-item">{{ item.topics3 }}</li>
+                    <li class="list-group-item">{{ item.topics4 }}</li>
+                    <li class="list-group-item">{{ item.topics5 }}</li>
+                    <li class="list-group-item">{{ item.topics6 }}</li>
+                </ul>                         
             </div>
 
-            <div class="col-md-6">
-                <img src="{{ item.image.url }}" class="img-fluid mb-3" alt="{{ item.name }}">
-                
+            <div class="col-md-6">              
                 <h2 class="mt-4">Чому саме цей курс?</h2>
-                <p>Існує багато мов програмування, і Pyton є однією із найбільш затребуваних у сфері розробки
-                    вебзастосунків, створення ігор тощо. Розробники Python отримують високу оплату й завжди
-                    затребувані.
-                    Хочете вирішити реальні проблеми програмування? Python навчить Вас цьому. Ви нарешті
-                    матимете карʼєру, про яку мрієте.
-                    На нашому курсі Основи Python програмування Ви оволодієте основами цієї мови
-                    пограмування та отримаєте навички, які зможете вдосконалювати далі. Курс призначений
-                    завдань, мінтри а атраиний та динароній форин за доло мог, що омбиних
-                    Ваше навчання цікавішим та ефективнішим.</p>
-
-                <!-- Додайте інші розділи за потреби -->
+                <p class="lead">{{ item.why_this_course }}</p>
             </div>
-        </div>
-    </div>
+        
+
+            <div class="row mt-4">
+                <div class="col-md-12 d-flex justify-content-left">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="{{ item.youtube_link }}" style="width: 210%; height: 210%;"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="row" style="margin-top: 150px;">
+                <div class="col-md-6 mt-1">    
+                    <h2 class="mt-4">{{ item.name1 }}</h2>          
+                    <p class="lead">{{ item.case1 }}</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 mt-1">    
+                    <h2 class="mt-4">{{ item.name2 }}</h2>          
+                    <p class="lead">{{ item.case2 }}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mt-1">    
+                    <h2 class="mt-4">{{ item.name3 }}</h2>          
+                    <p class="lead">{{ item.case3 }}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mt-1">    
+                    <h2 class="mt-4">{{ item.name4 }}</h2>          
+                    <p class="lead">{{ item.case4 }}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mt-1">    
+                    <h2 class="mt-4">{{ item.name5 }}</h2>          
+                    <p class="lead">{{ item.case5 }}</p>
+                </div>
+            </div>
+    
 {% endblock %}
