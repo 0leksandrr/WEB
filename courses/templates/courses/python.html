@@ -1,0 +1,68 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+{% load humanize %}
+
+{% block title %}
+    {{ item.name }}
+{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="font-weight-bold">{{ item.name }}</h1>
+                    <p class="lead">{{ item.description }}</p>
+                    <p class="lead font-weight-bold text-success">Безкоштовно</p>
+
+
+
+                    <!-- Додайте додаткові розділи або інформацію про курс за потреби -->
+
+                    <h2 class="mt-4">Що ви навчитесь:</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">Вступ до Python</li>
+                        <li class="list-group-item">Основи Python</li>
+                        <li class="list-group-item">Управління потоком передачі даних</li>
+                        <li class="list-group-item">Функції</li>
+                        <li class="list-group-item">Списки</li>
+                        <li class="list-group-item">Робота з файлами</li>
+                        <li class="list-group-item">Організація файлів</li>
+                        <li class="list-group-item">Помилки та винятки</li>
+                        <li class="list-group-item">Обʼєктно-орієнтований Python</li>
+                        <li class="list-group-item">Графічний інтерфейс - GUI</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <img src="{{ item.courses_image.url }}" class="img-fluid mb-3" alt="{{ item.name }}">
+
+                    <h2 class="mt-4">Чому саме цей курс?</h2>
+                    <p>Існує багато мов програмування, і Python є однією із найбільш затребуваних
+                         у сфері розробки вебзастосунків, створення ігор тощо. Розробники Python отримують
+                          високу оплату й завжди затребувані. Хочете вирішити реальні проблеми програмування? 
+                          Python навчить Вас цьому. Ви нарешті матимете карʼєру, про яку мрієте. На нашому курсі
+                           "Основи Python програмування" Ви оволодієте основами цієї мови програмування та отримаєте навички, 
+                           які зможете вдосконалювати далі. Курс призначений для завдань, мінтри, атраиний та динароній форин за 
+                           доло мог, що омбиних Ваше навчання цікавішим та ефективнішим.
+                    </p>
+                    
+                    <!-- Додайте інші розділи за потреби -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

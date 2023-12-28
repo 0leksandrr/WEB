@@ -2,20 +2,90 @@
 
 {% load static %}
 
-{% block title %}Курси{% endblock %}   
+{% block title %}Онлайн-навчання з ІТ{% endblock %}   
 
 {% block content %}
-    <div class="features">
-        <h1>Ласкаво просимо до Online-Education!</h1>
-        <p>Онлайн-платформа з навчання в галузі ІТ, де ви можете розвивати свої навички та отримувати нові знання.</p>
-        <p>Наші курси створені професіоналами галузі та покривають широкий спектр тем, від програмування до адміністрування систем.</p>
-        <p>Оберіть свій шлях розвитку, зареєструйтеся на курс і розпочніть свій шлях до успіху в ІТ-сфері.</p>
-        <button class="btn btn-warning">Про нас</button>
-    </div>
-    <div class="intro" id="intro">
-
+    
+    <div class="intro" id="intro" style="z-index: 0;">
+        <div class="container" style="margin-top: 200px">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1>Ласкаво просимо до<span class="badge badge-secondary">Online-Education!</span></h1>
+                    <p>Онлайн-платформа з навчання в галузі ІТ, де ви можете розвивати свої навички та отримувати нові знання.</p>
+                    <p>Наші курси створені професіоналами галузі та покривають широкий спектр тем, від програмування до адміністрування систем.</p>
+                    <p>Оберіть свій шлях розвитку, зареєструйтеся на курс і розпочніть свій шлях до успіху в ІТ-сфері.</p>
+                    <a href="{% url 'about' %}" class="btn btn-warning">Детальніше про нас</a>
+                </div>
+                <div class="col-lg-6">
+                    
+                </div>
+            </div>
+        </div>
     </div>
     <script src="{% static 'main/js/three.min.js' %}"></script>
     <script src="{% static 'main/js/vanta.waves.min.js' %}"></script>
     <script src="{% static 'main/js/app.js' %}"></script>
+
+   
+    
+
+<div style="margin-top: 720px;">
+    <div class="row mt-5 mb-5">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">Курс з програмування на Python</h3>
+                    <p class="card-text">Оволодійте мовою програмування Python та розширте свої навички.</p>
+                    <a href="{% url 'courses' %}" class="btn btn-primary">Детальніше</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">Курс з розробки веб-додатків</h3>
+                    <p class="card-text">Навчіться створювати веб-додатки з використанням сучасних технологій.</p>
+                    <a href="{% url 'courses' %}" class="btn btn-primary">Детальніше</a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Додайте інші курси за потреби -->
+    </div>
+
+        <!-- Додайте інші курси за потреби -->
+
+    </div>
+
+    <div class="list-group">
+        <a href="{% url 'news_home' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Xiaomi випускає свій перший електрокар — хоче конкурувати з Tesla та Porsche</h5>
+                <small>3 days ago</small>
+            </div>
+            <p class="mb-1">Китайська компанія Xiaomi представила свій перший електромобіль і одразу ж оголосила про наміри стати однією з п’яти найкращих автовиробників у світі. Про це повідомляє Reuters.
+
+                Седан під назвою SU7 (означає Speed Ultra) став довгоочікуваною моделлю, яку головний виконавчий директор Лей Джун рекламував як автомобіль з суперелектричним двигуном, здатним розганятися швидше, ніж автомобілі Tesla і електрокари Porsche.</p>
+            <small>Останні новини</small>
+        </a>
+        <a href="{% url 'news_home' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Apple знову може продавати заборонені моделі смартгодинників у США – дозвіл тимчасовий</h5>
+                <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1">За тиждень після заборони Apple знову може офіційно продавати Watch Series 9 та Ultra 2 у своїх магазинах у США. Компанія отримала тимчасове скасування заборони на продаж та імпорт цих пристроїв, пише Reuters.</p>
+            <small>Останні новини</small>
+        </a>
+        <a href="{% url 'news_home' %}" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">7 основних факторів, які впливають на успіх мобільного додатка на прикладі Portmone</h5>
+                <small>3 days ago</small>
+            </div>
+            <p class="mb-1">Щодня тисячі користувачів системи вирішують свої щоденні задачі за допомогою програми, вагою у кілька десятків мегабайтів, акумулюючи для себе додатковий час</p>
+            <small>Останні новини</small>
+        </a>
+    </div>
+  
+</div>
 {% endblock %}

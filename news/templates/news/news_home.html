@@ -3,19 +3,26 @@
 {% block title %}Новини на сайті{% endblock %}   
 
 {% block content %}
-    <div class="features">
-        <h1>Новини на сайті</h1>
-        {% if news %}
-            {% for el in news %}
-                <div class="alert alert-warning">
-                    <h3>{{ el.title }}</h3>
-                    <p>{{ el.anons }}</p>
-                </div>
-            {% endfor %}
-        {% else %}
-                <p>У вас немає новин</p>
-        {% endif %}
+    <div class="container mt-5 alert alert-primary">
+        <h1 class="text-center mb-4">Новини України і світу сьогодні</h1>
 
-        {# Коментар #}
+        {% if news %}
+            <div class="row">
+                {% for el in news %}
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title">{{ el.title }}</h3>
+                                <p class="card-text">{{ el.full_text }}</p>
+                                <p class="card-text"><small class="text-muted">Опубліковано: {{ el.date }}</small></p>
+                                <p class="card-text"><small class="text-muted">Автор: {{ el.author }}</small></p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="text-center">У вас немає новин</p>
+        {% endif %}
     </div>
 {% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+{% load humanize %}
+
+{% block title %}
+    {{ item.name }}
+{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="font-weight-bold">{{ item.name }}</h1>
+                    <p class="lead">{{ item.description }}</p>
+                    <p class="lead font-weight-bold text-success">Безкоштовно</p>
+
+
+
+                    <!-- Додайте додаткові розділи або інформацію про курс за потреби -->
+
+                    <h2 class="mt-4">Що ви навчитесь:</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">HTML та CSS: Основи Веб-розробки</li>
+                        <li class="list-group-item">JavaScript та Робота з Об'єктною Моделлю Документу (DOM)</li>
+                        <li class="list-group-item">Реактивні веб-сторінки: Основи та Принципи</li>
+                        <li class="list-group-item">Робота зі Зображеннями та Мультимедіа в Веб-розробці</li>
+                        <li class="list-group-item">Вивчення Інструментів та Бібліотек у курсі "Основи Веб-розробки: Від HTML до JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <img src="{{ item.courses_image.url }}" class="img-fluid mb-3" alt="{{ item.name }}">
+
+                    <h2 class="mt-4">Чому саме цей курс?</h2>
+                    <p>
+                        Існує безлічні можливості у світі веб-розробки,
+                         і засвоєння основ є критичним етапом для будь-якого 
+                         початківця. Наш курс "Основи Веб-розробки: Від HTML 
+                         до JavaScript" розроблений з метою надати студентам
+                          крісталічний розуміння ключових технологій, які лежать
+                           в основі сучасного вебу
+                    </p>
+                    
+                    <!-- Додайте інші розділи за потреби -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

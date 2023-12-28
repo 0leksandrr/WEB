@@ -54,13 +54,18 @@ header {
     color: #ab2222;
 }
 
+.list-group-item:hover {
+    background-color: #438edd; /* Змініть цей колір на бажаний */
+    /* Інші стилі, які ви хочете застосувати при наведенні */
+}
+
 .intro {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 75%;
-    z-index: -1; 
+    z-index: 0;  
 }
 
 form {

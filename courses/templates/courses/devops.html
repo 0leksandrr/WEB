@@ -1,0 +1,69 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+{% load humanize %}
+
+{% block title %}
+    {{ item.name }}
+{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="font-weight-bold">{{ item.name }}</h1>
+                    <p class="lead">{{ item.description }}</p>
+                    <p class="lead font-weight-bold text-success">Безкоштовно</p>
+
+
+
+                    <!-- Додайте додаткові розділи або інформацію про курс за потреби -->
+
+                    <h2 class="mt-4">Що ви навчитесь:</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">Введення в DevOps</li>
+                        <li class="list-group-item">Автоматизація інфраструктури</li>
+                        <li class="list-group-item">Керування конфігурацією</li>
+                        <li class="list-group-item">Continuous Integration (CI)</li>
+                        <li class="list-group-item">Continuous Deployment (CD)</li>
+                        <li class="list-group-item">Моніторинг та логування</li>
+                        <li class="list-group-item">Контейнеризація (Docker)</li>
+                        <li class="list-group-item">Оркестрація контейнерів (Kubernetes)</li>
+                        <li class="list-group-item">Інфраструктура як код (IaC)</li>
+                        <li class="list-group-item">Безпека в DevOps</li>
+                    </ul>                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <img src="{{ item.courses_image.url }}" class="img-fluid mb-3" alt="{{ item.name }}">
+
+                    <h2 class="mt-4">Чому саме цей курс?</h2>
+                    <p>
+                        Курс з DevOps — це програма навчання, спрямована на розуміння 
+                        та впровадження принципів, методологій та інструментів, пов'язаних
+                         з розробкою та експлуатацією програмного забезпечення (ПЗ). Термін
+                          "DevOps" походить від поєднання слів "Development" (розробка) та 
+                          "Operations" (експлуатація), і вказує на об'єднання зусиль розробників
+                           (Development) і системних адміністраторів (Operations) для поліпшення
+                            швидкості, надійності та ефективності розробки програмного забезпечення.
+                    </p>
+                    
+                    <!-- Додайте інші розділи за потреби -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

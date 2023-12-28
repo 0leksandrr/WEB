@@ -16,4 +16,14 @@ def courses(request):
 def coursesItem(request, my_id):
     item = Product.objects.get(id=my_id)
     context = {'item': item}
-    return render(request, 'courses/detail.html', context=context)
+
+    if my_id == 1:
+        template_name = 'courses/python.html'
+    elif my_id == 2:
+        template_name = 'courses/javascript.html'
+    elif my_id == 3:
+        template_name = 'courses/android_ios.html'
+    elif my_id == 4:
+        template_name = 'courses/devops.html'
+
+    return render(request, template_name, context=context)

@@ -1,0 +1,67 @@
+{% extends 'main/layout.html' %}
+
+{% load static %}
+{% load humanize %}
+
+{% block title %}
+    {{ item.name }}
+{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="font-weight-bold">{{ item.name }}</h1>
+                    <p class="lead">{{ item.description }}</p>
+                    <p class="lead font-weight-bold text-success">Безкоштовно</p>
+
+
+
+                    <!-- Додайте додаткові розділи або інформацію про курс за потреби -->
+
+                    <h2 class="mt-4">Що ви навчитесь:</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">Вступ до Android та iOS розробки</li>
+                        <li class="list-group-item">Основи мобільної розробки</li>
+                        <li class="list-group-item">Управління потоком передачі даних в мобільних додатках</li>
+                        <li class="list-group-item">Розробка функцій для мобільних платформ</li>
+                        <li class="list-group-item">Робота зі списками та даними в Android та iOS</li>
+                        <li class="list-group-item">Робота з файлами у мобільних додатках</li>
+                        <li class="list-group-item">Організація файлової структури в мобільних проектах</li>
+                        <li class="list-group-item">Обробка помилок та винятків у мобільних додатках</li>
+                        <li class="list-group-item">Обʼєктно-орієнтоване програмування в контексті Android та iOS</li>
+                        <li class="list-group-item">Розробка графічного інтерфейсу для мобільних додатків</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <img src="{{ item.courses_image.url }}" class="img-fluid mb-3" alt="{{ item.name }}">
+
+                    <h2 class="mt-4">Чому саме цей курс?</h2>
+                    <p>
+                        Цей курс створений для тих, хто бажає вивчити найсучасніші
+                         технології розробки програмного забезпечення для мобільних
+                          платформ Android та iOS. Наша програма надає повноцінний
+                           погляд на всі аспекти створення високоякісних мобільних 
+                           додатків, включаючи розробку, тестування та впровадження.
+                    </p>
+                    
+                    <!-- Додайте інші розділи за потреби -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

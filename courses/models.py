@@ -15,7 +15,7 @@ class Product(models.Model):
     topics5 = models.TextField()
     topics6 = models.TextField()
     image = models.ImageField(blank=True, upload_to='images/')
-    image = models.ImageField(blank=True, upload_to='courses_images/')
+    courses_image = models.ImageField(blank=True, upload_to='courses_images/')
     case1 = models.TextField()
     case2 = models.TextField()
     case3 = models.TextField()

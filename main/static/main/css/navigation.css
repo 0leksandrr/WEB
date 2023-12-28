@@ -10,6 +10,7 @@ aside {
     align-items: center;
     float: left;
     position: fixed;
+    z-index: 2;
 }
 
 aside img {
@@ -52,5 +53,6 @@ aside ul li i {
         height: auto;
         padding: 10px;
         text-align: center;
+        
     }
 }
