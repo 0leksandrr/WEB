@@ -1,8 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from .models import Product
 
-# Створюйте ваші функції тут.
+
 def courses(request):
     items = Product.objects.all()
     item_name = request.GET.get('search', '')

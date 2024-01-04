@@ -4,6 +4,7 @@ from .forms import NewUserForm
 from django.contrib.auth.decorators import login_required
 from .models import Profile
 from django.contrib.auth.models import User
+from courses.models import Product
 
 def register(request):
     if request.method == 'POST':

@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Teacher
 
 def index(request):
     return render(request, 'main/index.html')
@@ -7,7 +8,8 @@ def curriculum(request):
     return render(request, 'main/curriculum.html')
 
 def instructors(request):
-    return render(request, 'main/instructors.html')
+    teachers_list = Teacher.objects.all()
+    return render(request, 'main/instructors.html', {'teachers': teachers_list})
 
 def resources(request):
     return render(request, 'main/resources.html')
