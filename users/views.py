@@ -3,8 +3,8 @@ from django.contrib.auth import login
 from .forms import NewUserForm
 from django.contrib.auth.decorators import login_required
 from .models import Profile
-from django.contrib.auth.models import User
-from courses.models import Product
+from django.core.mail import send_mail
+from django.conf import settings
 
 def register(request):
     if request.method == 'POST':
@@ -12,6 +12,14 @@ def register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
+
+            # Відправка електронного листа
+            subject = 'Ласкаво просимо на наш сайт!'
+            message = 'Дякуємо за реєстрацію. Ви тепер можете насолоджуватися нашими послугами.'
+            from_email = settings.DEFAULT_FROM_EMAIL
+            to_email = [user.email]
+            send_mail(subject, message, from_email, to_email, fail_silently=False)
+
             return redirect('courses')
     form = NewUserForm()
     context = {'form':form}
