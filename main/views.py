@@ -11,9 +11,6 @@ def instructors(request):
     teachers_list = Teacher.objects.all()
     return render(request, 'main/instructors.html', {'teachers': teachers_list})
 
-def resources(request):
-    return render(request, 'main/resources.html')
-
 def forum(request):
     return render(request, 'main/forum.html')
 

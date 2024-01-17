@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'news',
     'courses',
     'users',
+    'resource',
     'embed_video',
     'widget_tweaks',
     'django.contrib.humanize',
