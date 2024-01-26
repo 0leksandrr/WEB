@@ -2,13 +2,12 @@ name: Django CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["master"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["master"]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
@@ -16,9 +15,9 @@ jobs:
         python-version: [3.7, 3.8, 3.9]
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v4 # Оновіть версію
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v4 # Оновіть версію
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install Dependencies
