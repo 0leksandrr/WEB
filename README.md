@@ -1,3 +1,4 @@
+[![Django CI](https://github.com/0leksandrr/WEB/actions/workflows/django.yml/badge.svg)](https://github.com/0leksandrr/WEB/actions/workflows/django.yml)
 Online-Education додаток який дозволяє вивчати прграмування за допомогою IT курсів.
 # Installation
 
