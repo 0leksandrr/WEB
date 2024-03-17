@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "kursova"
+version = "v1"
+description = "my kursova for university"
+authors = ["0leksandrr <tsybulskyy.sasha@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+setuptools = "^69.2.0"
+
+
+[tool.poetry.group.dev.dependencies]
+asgiref = "3.7.2"
+certifi = "2023.11.17"
+charset-normalizer = "3.3.2"
+django = "5.0"
+django-embed-video = "1.4.9"
+django-widget-tweaks = "1.5.0"
+idna = "3.6"
+pillow = "10.1.0"
+requests = "2.31.0"
+sqlparse = "0.4.4"
+typing-extensions = "4.9.0"
+tzdata = "2023.3"
+urllib3 = "2.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
