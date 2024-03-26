@@ -19,3 +19,5 @@ $ python manage.py migrate
 ```bash
 $ python manage.py runserver
 ```
+
+https://www.codewars.com/users/Wangler/badges/large
