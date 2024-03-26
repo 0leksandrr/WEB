@@ -20,4 +20,4 @@ $ python manage.py migrate
 $ python manage.py runserver
 ```
 
-https://www.codewars.com/users/Wangler/badges/large
+![alt текст](https://www.codewars.com/users/Wangler/badges/large)
